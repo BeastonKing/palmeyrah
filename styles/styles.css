@@ -1,0 +1,268 @@
+:root {
+  --text-gray: #231f20;
+  --bg-gray: #231f20;
+  --text-gold: #d8b47e;
+  --text-gold-darker: #b49669;
+  --bg-gold: #d8b47e;
+  --bg-gold-dark: #b49669;
+  --bg-gold-darker: #7d694e;
+  --text-white: #ffffff;
+  --text-black: #000000;
+  --bg-white: #ffffff;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-gray);
+  color: white;
+  width: 100%;
+  z-index: 9999;
+  position: absolute;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-gold);
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--text-gold-darker);
+}
+
+.hero {
+  height: 100vh;
+  background: url('../assets/image/heroCompressed.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--text-gold);
+  padding: 20px;
+  position: relative;
+}
+
+.hero-logo {
+  height: 300px;
+}
+
+.hero-title {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 52px;
+  font-weight: 400;
+  margin: 0rem 0rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.hero-title .highlight {
+  color: var(--text-gold);
+  display: block;
+}
+
+.hero-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  max-width: 53rem;
+  margin: 0rem 1rem 0rem;
+}
+
+.vertical-divider {
+  width: 1px;
+  height: 100%;
+  opacity: 0.7;
+  background-color: var(--text-gold);
+  border-radius: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-gray);
+  padding: 2rem 3rem;
+  gap: 2rem
+}
+
+.products aside {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  color: var(--text-gold);
+}
+
+.aside-title {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: end;
+  max-width: 300px;
+}
+
+.aside-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: end;
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+.products-container {
+  width: 70%;
+  height: 100%;
+}
+
+.product-list {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: auto;
+  gap: 2rem;
+  padding-bottom: 20px;
+}
+
+/* Custom Scrollbar Styles */
+.product-list::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.product-list::-webkit-scrollbar-thumb {
+  background-color: var(--bg-gold);
+  border-radius: 10px;
+}
+
+.product-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bg-gold-dark);
+}
+
+.product-list::-webkit-scrollbar-track {
+  background-color: var(--bg-gold-darker);
+  border-radius: 10px;
+}
+
+.product-list::-webkit-scrollbar-button:end:increment {
+  width: 55%;
+  display: block;
+  background: transparent;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-gold);
+  width: 400px;
+  min-height: fit-content;
+  height: 100%;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.card-image img {
+  height: 400px;
+  width: auto;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+.product-title {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-details p {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.product-details span {
+  flex: 1;
+}
+
+.product-details .value {
+  flex: 2;
+  text-align: left;
+}
+
+.product-description {
+  line-height: 1.5;
+}
+
+.quality {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-gold);
+  padding: 3rem;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.quality-title {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.quality-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  max-width: 63rem;
+}
+
+.quality-image {
+  height: 450px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 24px;
+  }
+}

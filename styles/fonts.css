@@ -1,0 +1,106 @@
+/* this file is for importing fonts */
+
+/* CINZEL */
+/* Regular */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/assets/font/Cinzel/Cinzel-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/assets/font/Cinzel/Cinzel-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/assets/font/Cinzel/Cinzel-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/assets/font/Cinzel/Cinzel-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/assets/font/Cinzel/Cinzel-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Black */
+@font-face {
+  font-family: 'Cinzel';
+  src: url('/assets/font/Cinzel/Cinzel-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 900;
+}
+
+/* MONTSERRAT */
+/* Light */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-Light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 300;
+}
+/* Regular */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Black */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-Black.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 900;
+}
