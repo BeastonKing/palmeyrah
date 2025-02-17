@@ -11,7 +11,6 @@
   --bg-white: #ffffff;
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,6 +34,22 @@
   list-style: none;
   gap: 3rem;
   font-family: 'Montserrat', sans-serif;
+  list-style-type: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  color: var(--text-gold);
+  cursor: pointer;
+}
+
+.hamburger i svg {
+  width: 35px;
+  height: 35px;
 }
 
 .nav-links a {
@@ -50,7 +65,8 @@
 
 .hero {
   height: 100vh;
-  background: url('../assets/image/heroCompressed.jpg') no-repeat center center/cover;
+  background: url('../assets/image/heroCompressed.jpg') no-repeat center
+    center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,12 +111,16 @@
   border-radius: 20px;
 }
 
+.horizontal-divider {
+  display: none;
+}
+
 .products {
   display: flex;
   justify-content: center;
   background-color: var(--bg-gray);
   padding: 2rem 3rem;
-  gap: 2rem
+  gap: 2rem;
 }
 
 .products aside {
@@ -231,7 +251,6 @@
   background-color: var(--bg-gold);
   padding: 3rem;
   gap: 1rem;
-  height: 100vh;
 }
 
 .quality-title {
@@ -251,18 +270,207 @@
 }
 
 .quality-image {
-  height: 450px;
-  width: auto;
+  max-width: 100%;
+  min-width: 300px;
+  height: auto;
 }
 
-@media (max-width: 768px) {
+/* Large (lg) Screens (Tablets, 1024px and below) */
+@media (max-width: 1024px) {
+  /* Hero section */
   .hero-title {
     font-size: 32px;
   }
+
+  .hero-description {
+    font-size: 18px;
+  }
+
+  .hero-logo {
+    height: 200px;
+  }
+
+  /* Products section */
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .products aside {
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .aside-title {
+    text-align: center;
+  }
+
+  .aside-description {
+    text-align: center;
+  }
+
+  .products aside {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .aside-title {
+    max-width: 100%;
+  }
+
+  .aside-description {
+    max-width: 80%;
+  }
+
+  .horizontal-divider {
+    display: block;
+    width: 100%;
+    height: 1px;
+    opacity: 0.7;
+    background-color: var(--text-gold);
+    border-radius: 20px;
+  }
+
+  .products-container {
+    width: 100%;
+  }
+
+
+  .product-card {
+    width: 300px;
+  }
+
+  .card-image img {
+    height: 300px;
+  }
+
+  .product-title {
+    font-size: 20px;
+  }
+
+  .product-details p, .product-description {
+    font-size: 14px;
+  }
+
+  .quality-title {
+    font-size: 36px;
+  }
+
+  .quality-description {
+    font-size: 16px;
+  }
 }
 
+/* Medium (md) Screens (Tablets, 768px and below) */
+@media (max-width: 768px) {
+
+  /* Navbar */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-gray);
+    padding: 1rem 1rem 2rem 1rem;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+
+  /* Hero section */
+  /* .hero-title {
+    font-size: 28px;
+  } 
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-logo {
+    height: 180px;
+  } */
+
+  /* Products section */
+  .product-card {
+    width: 250px;
+  }
+
+  .card-image img {
+    height: 250px;
+  }
+
+  .product-title {
+    font-size: 18px;
+  }
+
+  .product-details p, .product-description {
+    font-size: 12px;
+  }
+
+  .quality-title {
+    font-size: 32px;
+  }
+
+}
+
+/* Small Screens (Mobile, 480px and below) */
 @media (max-width: 480px) {
+  /* Hero section */
   .hero-title {
     font-size: 24px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-logo {
+    height: 150px;
+  }
+
+  /* Products section */
+  .aside-title {
+    font-size: 38px;
+  }
+
+  .aside-description {
+    font-size: 18px;
+  }
+
+  .product-card {
+    width: 200px;
+  }
+
+  .card-image img {
+    height: 200px;
+  }
+
+  .product-title {
+    font-size: 16px;
+  }
+
+  .product-details p, .product-description {
+    font-size: 10px;
+  }
+
+  .quality-title {
+    font-size: 28px;
+  }
+
+  .quality-description {
+    font-size: 14px;
   }
 }

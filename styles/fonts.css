@@ -50,6 +50,14 @@
 }
 
 /* MONTSERRAT */
+/* ExtraLight */
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/assets/font/Montserrat/Montserrat-ExtraLight.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+
 /* Light */
 @font-face {
   font-family: 'Montserrat';
