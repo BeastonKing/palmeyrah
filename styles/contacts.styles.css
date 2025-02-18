@@ -11,11 +11,11 @@
   --bg-white: #ffffff;
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
@@ -47,12 +47,203 @@
   color: var(--text-gold-darker);
 }
 
+.hero {
+  height: 40vh;
+  background: url('../assets/image/heroCompressed.jpg') no-repeat center
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Cinzel', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-gold);
+}
+
 .content {
   background-color: var(--bg-gold);
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 3rem;
+  gap: 3rem;
+}
+
+.menu {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 50px;
+  color: #967c57;
+  border-bottom: 1px solid black;
+  padding: 2rem 5rem 10rem 0rem;
+  text-align: left;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+button:first-child {
+  border-top: 1px solid black;
+}
+
+.active,
+button:hover {
+  color: black;
+}
+
+input,
+select {
+  width: 100%;
   padding: 1rem;
+  border: none;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+input:focus,
+select:focus,
+.textarea-container:focus-within {
+  outline: 3px solid var(--text-gold);
+}
+
+.form {
+  width: 50%;
+  background-color: var(--bg-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+.form div:first-child {
+  display: flex;
   gap: 1rem;
+}
+
+/* Container for the textarea and file upload button */
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  font-size: 14px;
+  resize: none;
+}
+
+/* Style the upload button */
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+  padding: 0 1rem;
+}
+
+.file-upload-label svg {
+  width: 25px;
+  height: 25px;
+  color: gray;
+}
+
+#file-upload {
+  margin-bottom: 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1.1rem;
+}
+
+#file-upload:focus {
+  outline: none;
+}
+
+::-webkit-file-upload-button {
+  display: none;
+}
+
+.careers-content {
+  display: none;
+  width: 50%;
+}
+
+.contacts {
+  background-color: var(--bg-gray);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  color: var(--text-gold);
+}
+
+.contacts h2 {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-item {
+  width: 16rem;
+  height: 11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--text-gold);
+  border-radius: 1rem;
+}
+
+.contact-item p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contact-item svg {
+  width: 4rem;
+  height: 4rem;
+  color: var(--text-gold);
+}
+
+.contact-item i {
+  color: var(--text-gold);
 }
