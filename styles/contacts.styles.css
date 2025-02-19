@@ -20,13 +20,18 @@
 
 .navbar {
   display: flex;
-  padding: 2rem;
+  padding: 1rem 2rem;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-gray);
   color: white;
   width: 100%;
   z-index: 9999;
+  position: fixed;
+}
+
+.logo {
+  width: 70px;
 }
 
 .nav-links {
@@ -34,6 +39,22 @@
   list-style: none;
   gap: 3rem;
   font-family: 'Montserrat', sans-serif;
+  list-style-type: none;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger i {
+  color: var(--text-gold);
+  cursor: pointer;
+}
+
+.hamburger i svg {
+  width: 35px;
+  height: 35px;
 }
 
 .nav-links a {
@@ -54,7 +75,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  /* padding: 20px; */
+  padding: 14rem 3rem 9rem;
 }
 
 .hero-title {
@@ -84,7 +106,7 @@
   align-items: flex-start;
 }
 
-button {
+.menu button {
   width: 100%;
   background-color: transparent;
   border: none;
@@ -104,7 +126,7 @@ button:first-child {
   border-top: 1px solid black;
 }
 
-.active,
+.menu .active,
 button:hover {
   color: black;
 }
@@ -144,6 +166,7 @@ select:focus,
   display: flex;
   flex-direction: column;
   gap: 0;
+  margin-bottom: 1rem;
 }
 
 textarea {
@@ -189,6 +212,20 @@ textarea {
   display: none;
 }
 
+button[type=submit] {
+  background-color: var(--bg-gold);
+  width: 8rem;
+  height: 3rem;
+  border: none;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: 0.2s all;
+}
+
+button[type=submit]:hover {
+  background-color: var(--bg-gold-dark);
+}
+
 .careers-content {
   display: none;
   width: 50%;
@@ -210,6 +247,7 @@ textarea {
   font-size: 38px;
   font-weight: 600;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .contacts-container {
@@ -231,6 +269,12 @@ textarea {
   text-align: center;
   border: 1px solid var(--text-gold);
   border-radius: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-item:hover {
+  background-color: var(--bg-gold);
 }
 
 .contact-item p {
@@ -241,9 +285,116 @@ textarea {
 .contact-item svg {
   width: 4rem;
   height: 4rem;
-  color: var(--text-gold);
 }
 
-.contact-item i {
+.contact-item p,
+.contact-item i,
+.contact-item svg {
   color: var(--text-gold);
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover p,
+.contact-item:hover svg,
+.contact-item:hover i {
+  color: var(--text-gray);
+}
+
+/* Large (lg) Screens (Tablets, 1024px and below) */
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .contacts h2 {
+    font-size: 32px;
+  }
+
+  .menu button {
+    font-size: 35px;
+  }
+
+  .form div:first-child {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* Medium (md) Screens (Tablets, 768px and below) */
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-gray);
+    padding: 1rem 1rem 2rem 1rem;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .hero-title {
+    font-size: 25px;
+  }
+
+  .contacts h2 {
+    font-size: 25px;
+  }
+
+  .contact-item {
+    width: 12rem;
+    height: 9rem;
+  }
+
+  .contact-item p {
+    font-size: 12px;
+  }
+
+  .contact-item svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .menu button {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+/* Small (sm) Screens (Tablets, 480px and below) */
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 20px;
+  }
+
+  .contacts h2 {
+    font-size: 20px;
+  }
 }

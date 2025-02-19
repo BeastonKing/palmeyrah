@@ -11,13 +11,29 @@
     <!-- HEADER -->
     <header>
       <nav class="navbar">
-        <div class="logo">BRANDLOGO</div>
-        <ul class="nav-links">
+        <img src="assets/image/logo.png" class="logo" />
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Products</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contacts.html">Contacts</a></li>
         </ul>
         <!-- hamburger here -->
+        <div class="hamburger" id="hamburger-icon">
+          <i
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              /></svg
+          ></i>
+        </div>
       </nav>
     </header>
 
@@ -35,19 +51,22 @@
         </div>
 
         <!-- Inquiry Form -->
-        <div class="form">
+        <!-- NOTE: Custom handler exists in the `contact.js` file -->
+        <form class="form" id="inquiry-form" action="mailto:loremipsum@gmail.com" method="post">
           <div>
             <input
               type="text"
               name="firstname"
               id="firstname"
               placeholder="Company/First Name"
+              required
             />
             <input
               type="text"
               name="lastname"
               id="lastname"
               placeholder="Last Name"
+              required
             />
           </div>
           <input
@@ -55,8 +74,9 @@
             name="email"
             id="email"
             placeholder="Email Address"
+            required
           />
-          <select name="category" id="category">
+          <select name="category" id="category" required>
             <option value="" selected disabled hidden>Inquiry Category</option>
             <option value="A">Category A</option>
             <option value="B">Category B</option>
@@ -67,6 +87,7 @@
             name="subject"
             id="subject"
             placeholder="Subject"
+            required
           />
           <div class="textarea-container">
             <textarea
@@ -74,6 +95,7 @@
               id="message"
               placeholder="Write your message here"
               rows="10"
+              required
             ></textarea>
             <div class="file-upload-label">
               <label for="file-upload">
@@ -91,7 +113,8 @@
               <input type="file" id="file-upload" name="file-upload" />
             </div>
           </div>
-        </div>
+          <button type="submit">Submit</button>
+        </form>
 
         <!-- Careers Content -->
         <div class="careers-content">
@@ -102,7 +125,11 @@
       <section class="contacts">
         <h2>We Also Available For You Through</h2>
         <div class="contacts-container">
-          <div class="contact-item">
+          <a
+            href="https://maps.app.goo.gl/asb6qtwxXmPvGaGA9"
+            target="_blank"
+            class="contact-item"
+          >
             <i
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,8 +145,12 @@
                 /></svg
             ></i>
             <p>Jl. Lorem Ipsum, No. 88B</p>
-          </div>
-          <div class="contact-item">
+          </a>
+          <a
+            href="https://www.instagram.com/palmeyrah.co"
+            target="_blank"
+            class="contact-item"
+          >
             <i
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -134,8 +165,12 @@
                 /></svg
             ></i>
             <p>Palmeyrah.co</p>
-          </div>
-          <div class="contact-item">
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=6281234567890&text=Lorem%20ipsum"
+            target="_blank"
+            class="contact-item"
+          >
             <i
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,8 +185,12 @@
                 /></svg
             ></i>
             <p>+62 812 3456 7890</p>
-          </div>
-          <div class="contact-item">
+          </a>
+          <a
+            href="https://www.linkedin.com/company/palmeyrah-co/"
+            target="_blank"
+            class="contact-item"
+          >
             <i
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -167,7 +206,7 @@
             ></i>
 
             <p>Palmeyrah.co</p>
-          </div>
+          </a>
         </div>
       </section>
     </main>

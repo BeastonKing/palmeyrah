@@ -19,14 +19,18 @@
 
 .navbar {
   display: flex;
-  padding: 2rem;
+  padding: 1rem 2rem;
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-gray);
   color: white;
   width: 100%;
   z-index: 9999;
-  position: absolute;
+  position: fixed;
+}
+
+.logo {
+  width: 70px;
 }
 
 .nav-links {
@@ -64,7 +68,7 @@
 }
 
 .hero {
-  height: 100vh;
+  /* height: 100vh; */
   background: url('../assets/image/heroCompressed.jpg') no-repeat center
     center/cover;
   display: flex;
@@ -72,12 +76,13 @@
   align-items: center;
   text-align: center;
   color: var(--text-gold);
-  padding: 20px;
+  padding: 7rem 3rem 7rem;
   position: relative;
 }
 
 .hero-logo {
-  height: 300px;
+  height: 250px;
+  margin-bottom: 2rem;
 }
 
 .hero-title {
@@ -192,14 +197,103 @@
 
 .product-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 2rem;
   background-color: var(--bg-gold);
-  width: 400px;
   min-height: fit-content;
-  height: 100%;
   border-radius: 20px;
   padding: 1rem;
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 100%;
+}
+
+.right {
+  display: none;
+}
+
+.cart {
+  height: 400px;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.cart-content {
+  background-color: var(--bg-gray);
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: var(--text-gold);
+}
+
+.quantity-display {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  border-left: 2px solid var(--text-gold);
+  border-right: 2px solid var(--text-gold);
+  width: 5rem;
+  text-align: center;
+  /* padding: 0 1rem; */
+}
+
+.minus-button, .plus-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 50px;
+  color: var(--text-gold);
+  font-weight: 700;
+  margin: 0rem 0.5rem;
+  padding: 0rem 0.5rem;
+  border-radius: 10px;
+}
+
+.minus-button:hover, .plus-button:hover {
+  background-color: var(--bg-gold);
+  color: var(--text-gray);
+}
+
+.add-cart {
+  background-color: var(--bg-gold);
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  height: 4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 0.7rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-cart:hover {
+  background-color: var(--bg-gold-dark);
+  /* color: var(--text-g); */
+}
+
+.add-cart svg {
+  width: 2rem;
 }
 
 .card-image img {
@@ -239,8 +333,36 @@
   text-align: left;
 }
 
+.logistic p {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.logistic span {
+  flex: 1;
+}
+
+.logistic .value {
+  flex: 1;
+  text-align: left;
+}
+
+
+
 .product-description {
   line-height: 1.5;
+}
+
+.more-info, .less-info {
+  color: darkblue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.more-info:hover, .less-info:hover {
+  /* text-decoration: none; */
+  color: blue;
 }
 
 .quality {
@@ -443,11 +565,11 @@
 
   /* Products section */
   .aside-title {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   .aside-description {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .product-card {
