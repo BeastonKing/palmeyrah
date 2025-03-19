@@ -69,15 +69,26 @@
 
 .hero {
   /* height: 100vh; */
-  background: url('../assets/image/heroCompressed.jpg') no-repeat center
-    center/cover;
+  width: 100%;
+  background: url('../assets/image/heroCompressed.jpg') no-repeat center/cover;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: var(--text-gold);
-  padding: 7rem 3rem 7rem;
+  padding: 7rem 0rem 3rem;
   position: relative;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 3rem 5rem;
+  width: 90%;
+  border-bottom: 1px solid var(--text-gold);
 }
 
 .hero-logo {
@@ -122,9 +133,10 @@
 
 .products {
   display: flex;
+  width: 100%;
   justify-content: center;
-  background-color: var(--bg-gray);
-  padding: 2rem 3rem;
+  /* background: url('../assets/image/heroCompressed.jpg') no-repeat center center/cover; */
+  padding: 5rem 3rem 2rem;
   gap: 2rem;
 }
 
@@ -202,24 +214,20 @@
   background-color: var(--bg-gold);
   min-height: fit-content;
   border-radius: 20px;
-  padding: 1rem;
+  padding: 0rem 1rem;
 }
 
-.left, .right {
+.coming-card {
+  min-height: fit-content;
+  background-color: var(--bg-gold);
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 100%;
-}
-
-.right {
-  display: none;
+  padding: 1rem;
+  border-radius: 20px;
 }
 
 .cart {
-  height: 400px;
-  margin-bottom: 1rem;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -297,19 +305,22 @@
 }
 
 .card-image img {
-  height: 400px;
-  width: auto;
+  height: auto;
+  width: 400px;
   border-radius: 20px;
-  margin-bottom: 1rem;
 }
 
 .card-content {
   display: flex;
+  height: 100%;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
-  padding: 0 0.5rem;
+  padding: 1rem 0.5rem;
+  color: black;
+  text-align: left;
 }
 .product-title {
   font-family: 'Cinzel', sans-serif;
@@ -318,19 +329,18 @@
   text-transform: uppercase;
 }
 
-.product-details p {
+.product-details {
+  margin-top: 1rem;
   display: flex;
-  justify-content: space-between;
-  margin: 6px 0;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.product-details span {
-  flex: 1;
-}
-
-.product-details .value {
-  flex: 2;
-  text-align: left;
+.product-details .type {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .logistic p {
@@ -348,11 +358,6 @@
   text-align: left;
 }
 
-
-
-.product-description {
-  line-height: 1.5;
-}
 
 .more-info, .less-info {
   color: darkblue;
@@ -395,6 +400,76 @@
   max-width: 100%;
   min-width: 300px;
   height: auto;
+}
+
+.contacts {
+  background-color: var(--bg-gray);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  color: var(--text-gold);
+}
+
+.contacts h2 {
+  font-family: 'Cinzel', sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-item {
+  width: 16rem;
+  height: 11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--text-gold);
+  border-radius: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-item:hover {
+  background-color: var(--bg-gold);
+}
+
+.contact-item p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-item svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.contact-item p,
+.contact-item i,
+.contact-item svg {
+  color: var(--text-gold);
+  transition: color 0.2s ease;
+}
+
+.contact-item:hover p,
+.contact-item:hover svg,
+.contact-item:hover i {
+  color: var(--text-gray);
 }
 
 /* Large (lg) Screens (Tablets, 1024px and below) */
@@ -456,24 +531,24 @@
 
   .products-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-
-  .product-card {
-    width: 300px;
+  .product-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
   }
 
   .card-image img {
-    height: 300px;
+    width: 300px;
   }
 
   .product-title {
     font-size: 20px;
   }
 
-  .product-details p, .product-description {
-    font-size: 14px;
-  }
 
   .quality-title {
     font-size: 36px;
@@ -481,6 +556,10 @@
 
   .quality-description {
     font-size: 16px;
+  }
+
+  .contacts h2 {
+    font-size: 32px;
   }
 }
 
@@ -526,26 +605,49 @@
   } */
 
   /* Products section */
-  .product-card {
-    width: 250px;
+  .products {
+    padding: 5rem 1rem 2rem;
   }
 
   .card-image img {
-    height: 250px;
+    width: 250px;
   }
 
   .product-title {
     font-size: 18px;
   }
 
-  .product-details p, .product-description {
-    font-size: 12px;
-  }
-
   .quality-title {
     font-size: 32px;
   }
 
+  .contacts-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-item {
+    width: 100%;
+    height: 6rem;
+    flex-direction: row;
+  }
+
+  .contact-item p {
+    font-size: 18px;
+  }
+
+  .contact-item svg {
+    width: 3rem;
+    height: 3rem;
+  }
+
+}
+
+/* Intermediary Screens (Mobile, 600px and below) */
+@media (max-width: 600px) {
+  .product-list {
+    justify-content: flex-start;
+  }
 }
 
 /* Small Screens (Mobile, 480px and below) */
@@ -553,10 +655,6 @@
   /* Hero section */
   .hero-title {
     font-size: 24px;
-  }
-
-  .hero-description {
-    font-size: 16px;
   }
 
   .hero-logo {
@@ -572,20 +670,14 @@
     font-size: 16px;
   }
 
-  .product-card {
-    width: 200px;
-  }
+  
 
   .card-image img {
-    height: 200px;
+    width: 200px;
   }
 
   .product-title {
     font-size: 16px;
-  }
-
-  .product-details p, .product-description {
-    font-size: 10px;
   }
 
   .quality-title {
@@ -593,6 +685,14 @@
   }
 
   .quality-description {
+    font-size: 14px;
+  }
+
+  .contacts h2 {
+    font-size: 20px;
+  }
+
+  .contact-item p {
     font-size: 14px;
   }
 }
