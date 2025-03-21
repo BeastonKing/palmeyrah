@@ -195,7 +195,7 @@
 .hero {
   /* height: 100vh; */
   width: 100%;
-  background: url('../assets/image/heroCompressed.jpg') no-repeat center/cover;
+  background: url('../assets/image/heroMediumCompressed.jpg') no-repeat top center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -497,6 +497,15 @@
   .contact-item svg {
     width: 3rem;
     height: 3rem;
+  }
+}
+
+/* Intermediate (int) Screens (Tablets, 600px and below) */
+
+@media (max-width: 600px) {
+  /* Hero section */
+  .hero {
+    background: url('../assets/image/heroLargeCompressed.jpg') no-repeat top center/cover;
   }
 }
 
